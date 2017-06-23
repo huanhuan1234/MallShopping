@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Shop</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="tab_home_text">首页</string>
+    <string name="tab_discover_text">分类</string>
+    <string name="tab_feed_text">购物车</string>
+    <string name="tab_me_text">我的</string>
+
+    <string name="guanzhu">关注</string>
+    <string name="remen">热门</string>
+</resources>
