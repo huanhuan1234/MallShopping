@@ -26,7 +26,14 @@ import hhh.bawei.com.myshopping.fragment.SecondFragment;
 import hhh.bawei.com.myshopping.fragment.ThirdFragment;
 
 import static hhh.bawei.com.myshopping.R.id.sm;
-
+/**
+ *  
+ * 
+ * 类的用途:
+ * 实现思路:
+ * @author HuangMingHuan
+ * create at 2017/6/30 12:38
+ **/
 public class MainActivity extends FragmentActivity {
 
     private List<Fragment> fragments = new ArrayList<Fragment>();
