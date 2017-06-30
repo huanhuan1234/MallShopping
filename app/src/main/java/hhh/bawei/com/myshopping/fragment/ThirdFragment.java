@@ -3,6 +3,7 @@ package hhh.bawei.com.myshopping.fragment;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -47,7 +48,7 @@ public class ThirdFragment extends Fragment {
     LinearLayout thirdPayLinear;
     Unbinder unbinder;
     private ThirdFragmentAdapter adapter;
-
+    private boolean checked;
     public ThirdFragment() {
         // Required empty public constructor
     }
@@ -129,6 +130,36 @@ public class ThirdFragment extends Fragment {
                 System.out.println("mTotlaPrice = " + mTotlaPrice);
                 thirdTotalprice.setText("总价:"+mTotlaPrice );
                 thirdTotalnum.setText("共:" +mTotalNum +"件商品");
+
+            }
+        });
+
+
+
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        //全选的按钮
+        thirdAllselect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                for(int i=0;i<mAllOrderList.size();i++){
+                    if(!checked){
+                        mAllOrderList.get(i).setSelect(true);
+                    }else {
+                        mAllOrderList.get(i).setSelect(false);
+                    }
+                }
+                adapter.notifyDataSetChanged();
+
+                if(!checked){
+                    checked = true;
+                }else {
+                    checked = false;
+                }
 
             }
         });
